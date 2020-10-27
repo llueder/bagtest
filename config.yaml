@@ -1,0 +1,26 @@
+# Title of this configuration file
+title: "spielen"
+# Tag that identifies this configuration file.
+tag: "spielen"
+# Description of this configuration file
+description: "keine"
+# Author of this configuration file
+author: "niemand"
+
+# Extraction rules
+rules:
+  time-series-imu:
+    plugin: "rbb_tools.plugins.time_series"
+    config:
+      topics:
+        /imu:
+          name: "imu seq"
+          series:
+            seq:
+              label: "seq"
+              default_color: "#FF0000"
+    topic_matchers:
+      - type: "rbb_tools.extraction.matchers.ExactMatchingRule"
+        config:
+          topics:
+            /imu: "*"
