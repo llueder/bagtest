@@ -20,7 +20,7 @@ rules:
               label: "seq"
               default_color: "#FF0000"
     topic_matchers:
-      - type: "rbb_tools.extraction.matchers.ExactMatchingRule"
+      - type: "rbb_tools.extraction.matchers.AllTopicsMatchingRule"
         config:
-          topics:
-            /imu: "*"
+#          topics:
+#            /imu: "*"
