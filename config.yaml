@@ -24,3 +24,16 @@ rules:
         config:
           topics:
             /imu: "*"
+  count-fl:
+    plugin: "rbb_tools.plugins.pc_counter"
+    config:
+      topics:
+        /lux/car_lux_fl:
+          name: "car lux fl"
+    topic_matchers:
+      - type: "rbb_tools.extraction.matchers.ExactMatchingRule"
+        config:
+          topics:
+            /lux/car_lux_fl: "*"
+
+  
